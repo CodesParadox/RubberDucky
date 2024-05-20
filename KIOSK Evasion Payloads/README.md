@@ -2,7 +2,9 @@ Kiosk Evasion Script
 =====================
 
 **Author:** @CodesParadox
+
 **Target:** Windows
+
 **Optimized for:** Flipper Zero
 
 **Description:**
